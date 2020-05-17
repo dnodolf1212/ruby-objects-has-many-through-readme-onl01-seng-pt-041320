@@ -20,7 +20,8 @@ class Waiter
     def meals
       #binding.pry
         Meal.all.select do |meal|
-            meal.waiter == self
+        meal.waiter == self
+      end 
     end
 
     def best_tipper
