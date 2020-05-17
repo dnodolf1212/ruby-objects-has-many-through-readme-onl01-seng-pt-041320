@@ -1,3 +1,4 @@
+require 'pry'
 class Waiter
     attr_accessor :name, :yrs_experience
     @@all = []
@@ -17,6 +18,7 @@ class Waiter
     end 
 
     def meals
+      binding.pry
         Meal.all.select do |meal|
             meal.waiter == self
     end
